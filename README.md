@@ -1,7 +1,7 @@
 #ES Project : EERC, IIIT-Hyderabad.
 
 This repository contains code for the portal being developed as part of the ES project. 
-
+####Coding guide for PHP has been added!
 
 ##Coding conventions
 
@@ -26,7 +26,6 @@ Here is an example format for the form file:
 
 Note: Do not put `<html>` or other header tags in the form files. Just the form element. 
 
-####THIS SECTION HAS BEEN MODIFIED
 Earlier, it was mentioned that `All form files should be created in root directory (with the js and css folders)`.
 However, now the directory structure has been changed due to new information that was brought to attention.
 
@@ -57,5 +56,25 @@ Will be added.
 
 
 ###For PHP
+Create one single php file that handles all form submits. 
+To find out which form was the one which sent a request, use `$_POST["submit"]`'s value attribute in the PHP and modify that in the form. 
 
-Will be added.
+For example, in all the forms, do this: 
+```
+<form action="backend.php" method="POST" ...>
+.
+.
+.
+<input type="submit" name="submit" value="form_1_23" />
+</form>
+```
+The `value` attribute of the submit input should be sent to the PHP and it will tell you which form was just submitted. 
+
+In the PHP, you can read this by using something like:
+```
+<?php
+if (isset($_POST['submit']) && $_POST['submit'] == "form_1_23") {
+    echo "This came from form 1 part 23";       // I can now make database calls according to this form here. 
+    }
+?>
+```
