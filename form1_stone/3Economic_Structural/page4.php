@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--Economic Loss-Inducing Factors related to the Structural Elements - Page 4 -->
-<form action="form-1-backend.php" method="">
+<form action="page4-backend.php" method="">
     <p>5. Construction Details</p>
 
     <p>5.1 Quality</p>

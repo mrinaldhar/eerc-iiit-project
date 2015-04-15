@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--Economic Loss-Inducing Factors related to the Structural Elements - Page 3 -->
 
-<form action="form-1-backend.php" method="">
+<form action="page3-backend.php" method="">
     <p>4. Structural Aspects</p>
 
     <p>4.1 Walls</p>
@@ -28,7 +28,7 @@
     <p>4.4 Wall-wall connection</p>
     <p>You may select one out of the first two options, and 0 or more out of the rest.</p>
     <input type="radio" name="_4-4" value='a'/>No roof band with pitched roof<br/>
-    <input type="radio" name="_4-4" value='b'/>No roof band with flat roof<br/>
+    <input type="radio" name="_4-4" value='b' checked/>No roof band with flat roof<br/>
     <input type="checkbox" name="_4-4[]" value='c'/>No lintel band<br/>
     <input type="checkbox" name="_4-4[]" value='d'/>No sill band<br/>
     <input type="checkbox" name="_4-4[]" value='e'/>No plinth band<br/>
@@ -48,7 +48,8 @@
 
     <p>4.7 Large water tanks flat on roof</p>
     <input type="radio" name="_4-7" value='a'/>Unsymmetrically located and integrally built staircase<br/>
-    <input type="radio" name="_4-7" value='b' checked/>Staircase not adequately separated from the house<br/>
+    <input type="radio" name="_4-7" value='b'/>Staircase not adequately separated from the house<br/>
+    <input type="radio" name="_4-7" value='c' checked/>None of these
 
 
     <br/>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--Economic Loss-Inducing Factors related to the Structural Elements - Page 2 -->
 
-<form action="form-1-backend.php" method="">
+<form action="page2-backend.php" method="">
     <p>3. Architectural Features</p>
 
     <p>3.1 Plan shape</p>
@@ -30,7 +30,9 @@
 
     <p>3.4 Distance from adjacent building</p>
     <input type="radio" name="_3-4" value='a'/>Houses touch each other<br/>
-    <input type="radio" name="_3-4" value='b' checked/>Houses have small gap between them<br/>
+    <input type="radio" name="_3-4" value='b'/>Houses have small gap between them<br/>
+    <input type="radio" name="_3-4" value='c' checked/>None of these<br/>
+
 
     <p>3.5 Parapets, objects on roof or projections</p>
     <p>You may select 0 or more.</p>
@@ -52,7 +54,9 @@
 
     <p>3.8 Number of storeys</p>
     <input type="radio" name="_3-8" value='a'/>3 storeys<br/>
-    <input type="radio" name="_3-8" value='b' checked/>4 storey or more<br/>
+    <input type="radio" name="_3-8" value='b'/>4 storey or more<br/>
+    <input type="radio" name="_3-8" value='c' checked/>None of these
+
 
     <br/>
 
