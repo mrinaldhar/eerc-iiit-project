@@ -38,7 +38,7 @@ cylinders/stoves, which in turn can lead to gas leakage a nd thereby asphyxiatio
 <input type="radio" name="_2b" value="Y"> Yes
 <input type="radio" name="_2b" value="N"> No
 
-<p>b. Sewage lines are held rigidly between the house and the septic tank with no slack, that can result in breakage of sewage lines during an
+<p>c. Sewage lines are held rigidly between the house and the septic tank with no slack, that can result in breakage of sewage lines during an
 earthquake.</p>
 <input type="radio" name="_2c" value="Y"> Yes
 <input type="radio" name="_2c" value="N"> No
@@ -46,4 +46,3 @@ earthquake.</p>
 <br>
 <input type="submit" value="submit">
 </form>
-
