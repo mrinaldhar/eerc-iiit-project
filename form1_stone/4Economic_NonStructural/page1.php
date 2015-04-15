@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--Economic Loss-Inducing Factors related to the Non-Structural Elements - Page 1 -->
 
-<form action= "form-1-backend.php" method="">
+<form action= "page1-backend.php" method="">
     <p>1. Acceleration and Displacement Hazards</p>
 
     <p>1.1 Shelves</p>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 15, 2015 at 11:24 PM
+-- Generation Time: Apr 16, 2015 at 12:25 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -327,6 +327,109 @@ CREATE TABLE IF NOT EXISTS `Form3_RCFrame_LS` (
   `constr_a` varchar(2) NOT NULL,
   `constr_b` varchar(2) NOT NULL,
   `constr_c` varchar(2) NOT NULL,
+  `score` int(6) NOT NULL,
+  `zone` int(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Form4_Ikara_ENS`
+--
+
+CREATE TABLE IF NOT EXISTS `Form4_Ikara_ENS` (
+  `id` int(6) NOT NULL,
+  `lat_long` varchar(10) NOT NULL,
+  `accel_and_disp_a` varchar(2) NOT NULL,
+  `accel_and_disp_b` varchar(2) NOT NULL,
+  `accel_and_disp_c` varchar(2) NOT NULL,
+  `accel_and_disp_d` varchar(2) NOT NULL,
+  `accel_and_disp_e` varchar(2) NOT NULL,
+  `lifelines_a` varchar(2) NOT NULL,
+  `lifelines_b` varchar(2) NOT NULL,
+  `lifelines_c` varchar(2) NOT NULL,
+  `score` int(6) NOT NULL,
+  `zone` int(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Form4_Ikara_ES`
+--
+
+CREATE TABLE IF NOT EXISTS `Form4_Ikara_ES` (
+  `id` int(6) NOT NULL,
+  `lat_long` varchar(10) NOT NULL,
+  `siting_a` varchar(8) NOT NULL,
+  `soil_and_foundn_a` varchar(8) NOT NULL,
+  `soil_and_foundn_b` varchar(8) NOT NULL,
+  `arch_a` varchar(8) NOT NULL,
+  `arch_b` varchar(8) NOT NULL,
+  `arch_c` varchar(8) NOT NULL,
+  `arch_d` varchar(8) NOT NULL,
+  `arch_e` varchar(8) NOT NULL,
+  `arch_f` varchar(8) NOT NULL,
+  `struct_a` varchar(8) NOT NULL,
+  `struct_b` varchar(8) NOT NULL,
+  `struct_c` varchar(8) NOT NULL,
+  `struct_d` varchar(8) NOT NULL,
+  `struct_e` varchar(8) NOT NULL,
+  `constr_a` varchar(8) NOT NULL,
+  `constr_b` varchar(8) NOT NULL,
+  `score` int(6) NOT NULL,
+  `zone` int(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Form4_Ikara_LNS`
+--
+
+CREATE TABLE IF NOT EXISTS `Form4_Ikara_LNS` (
+  `id` int(6) NOT NULL,
+  `lat_long` varchar(10) NOT NULL,
+  `accel_and_disp_a` varchar(2) NOT NULL,
+  `accel_and_disp_b` varchar(2) NOT NULL,
+  `accel_and_disp_c` varchar(2) NOT NULL,
+  `accel_and_disp_d` varchar(2) NOT NULL,
+  `accel_and_disp_e` varchar(2) NOT NULL,
+  `accel_and_disp_f` varchar(2) NOT NULL,
+  `lifelines_a` varchar(2) NOT NULL,
+  `lifelines_b` varchar(2) NOT NULL,
+  `lifelines_c` varchar(2) NOT NULL,
+  `score` int(6) NOT NULL,
+  `zone` int(6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Form4_Ikara_LS`
+--
+
+CREATE TABLE IF NOT EXISTS `Form4_Ikara_LS` (
+  `id` int(6) NOT NULL,
+  `lat_long` varchar(10) NOT NULL,
+  `siting_a` varchar(2) NOT NULL,
+  `siting_b` varchar(2) NOT NULL,
+  `siting_c` varchar(2) NOT NULL,
+  `siting_d` varchar(2) NOT NULL,
+  `siting_e` varchar(2) NOT NULL,
+  `soil_and_foundn_a` varchar(2) NOT NULL,
+  `soil_and_foundn_b` varchar(2) NOT NULL,
+  `soil_and_foundn_c` varchar(2) NOT NULL,
+  `soil_and_foundn_d` varchar(2) NOT NULL,
+  `arch_a` varchar(2) NOT NULL,
+  `arch_b` varchar(2) NOT NULL,
+  `struct _a` varchar(2) NOT NULL,
+  `struct _b` varchar(2) NOT NULL,
+  `struct _c` varchar(2) NOT NULL,
+  `struct _d` varchar(2) NOT NULL,
+  `struct _e` varchar(2) NOT NULL,
+  `constr_a` varchar(2) NOT NULL,
+  `constr_b` varchar(2) NOT NULL,
   `score` int(6) NOT NULL,
   `zone` int(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

@@ -6,8 +6,10 @@
 
     <p>1.1 Slope of the ground</p>
     <input type="radio" name="_1-1" value='a'/>The house is on sloped ground with access to house at two/three levels, i.e., ground, middle floor, and roof<br/>
-    <input type="radio" name="_1-1" value='b' checked/>The house is connected to the sloped ground and there is no gap between the building and the natural slope of the site
+    <input type="radio" name="_1-1" value='b'/>The house is connected to the sloped ground and there is no gap between the building and the natural slope of the site
+    <input type="radio" name="_1-1" value='c' checked/>None of these
     <br/>
+
 
     <p>2. Soil and Foundation Conditions</p>
 
@@ -16,6 +18,8 @@
     <input type="radio" name="_2-1" value='b'/>Weak soil<br/>
     <input type="radio" name="_2-1" value='c'/>High water table<br/>
     <input type="radio" name="_2-1" value='d' checked/>Soil with moisture<br/>
+    <input type="radio" name="_2-1" value='e' checked/>None of these    
+    <br/>
 
     <p>2.2 Foundation</p>
     <p>You may select 0 or more.</p>
