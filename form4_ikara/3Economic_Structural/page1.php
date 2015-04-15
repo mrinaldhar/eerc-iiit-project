@@ -18,7 +18,7 @@
 <input type="radio" name="_2-1" value="b"> Weak soil
 <input type="radio" name="_2-1" value="c"> High water table
 <input type="radio" name="_2-1" value="d"> Soil with moisture
-<input type="radio" name="_2-1" value="e" checked> None of the Above
+<input type="radio" name="_2-1" value="e" checked> None of these.
 
 <p>2.2 Foundation</p>
 <p>You may select 0 or more.</p>

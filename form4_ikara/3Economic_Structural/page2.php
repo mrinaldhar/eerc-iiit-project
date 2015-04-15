@@ -24,7 +24,7 @@
 <p>3.3 Distance from adjacent building</p>
 <input type="radio" name="_3-3" value="a"> Houses touch each other.
 <input type="radio" name="_3-3" value="b"> Houses have small gap between them.
-<input type="radio" name="_3-3" value="c" checked> None of the Above.
+<input type="radio" name="_3-3" value="c" checked> None of these.
 
 <p>3.4 Parapets,objects on roof or projections</p>
 <input type="checkbox" name="_3-4[]" value="a"> Not secured to the structural system

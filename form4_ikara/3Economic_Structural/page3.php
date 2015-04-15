@@ -32,7 +32,7 @@
 <p>4.5 Staircase</p>
 <input type="radio" name="_4-5" value="a"> Unsymmetrically in plan location but integrally built within the house .
 <input type="radio" name="_4-5" value="b"> Inadequately seperated from the house .
-<input type="radio" name="_4-5" value="c" checked>
+<input type="radio" name="_4-5" value="c" checked> None fo these.
 
 
 <br>
