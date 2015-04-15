@@ -1,4 +1,4 @@
-
+    
 <!-- Economic Loss-Inducing Factors related to the house construction - Page 1 -->
 
 <form action="page1-backend.php">
@@ -7,7 +7,7 @@
 <p>1. Siting Issues</p>
 <p>1.1 Slope of the ground</p>
 <p>You may select 0 or more.</p>
-<input type="checkbox" name="_1-1[]" value="a">The building is built on sloped ground with access at two or more levels, i.e., at ground, intermediate floor & roof. 
+<input type="checkbox" name="_1-1[]" value="a">The building is built on sloped ground with access at two or more levels, i.e., at ground, intermediate floor & roof.
 
 
 
@@ -31,5 +31,3 @@
 <br>
 <input type="submit" value="Submit">
 </form>
-
-
