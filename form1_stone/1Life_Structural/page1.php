@@ -30,5 +30,4 @@
     <input type="radio" name="_2b" value='N'/>No
     <br/>
 
-    <input type="submit"/>Submit
-</form>
+    <button onclick="openTab(2); return false;">Next page</button>
