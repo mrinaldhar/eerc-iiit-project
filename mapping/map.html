@@ -1,0 +1,462 @@
+<html>
+<body onLoad="initialize()">
+<button onclick="getLocation()">Share Current Location</button>
+<br>
+<br>
+  <input id="searchTextField" class="form-control" type="text" style="float: left;width: 60%;" onKeydown="Javascript:    if(event.keyCode==13)giveresultdelay();">
+  <br>
+  <br>
+  <div id="map_canvas" style="width:50%; height:50%; border: 5px solid #000;"></div>
+
+  <div id="latlong">
+    <p>Latitude: <input size="20" type="text" id="latbox" name="lat" ></p>
+    <p>Longitude: <input size="20" type="text" id="lngbox" name="lng" ></p>
+    <br>
+    <p id="zone"></p>
+  </div>
+
+</body>
+</html>
+
+<cfoutput>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+</cfoutput> 
+<script type="text/javascript">
+function zone(longitude, latidude){
+		if((longitude >= 34.81 && longitude <=37.81)&&(latidude>=71.62 && latitude<=80.76))
+		{
+			return 4;
+		}
+		else if((longitude >= 33.42 && longitude <=34.49)&&(latidude>=73.9 && latitude<=77.7))
+		{
+			return 4;
+		}
+		else if((longitude >= 33.51 && longitude <=34.54)&&(latidude>=73.9 && latitude<=75.29))
+		{
+			return 5;
+		}
+		else if((longitude >= 33.51 && longitude <=34.68)&&(latidude>=75.29 && latitude<=80.76))
+		{
+			return 4;
+		}
+		else if((longitude >= 32.74 && longitude <=33.42)&&(latidude>=71.62 && latitude<=80.79))
+		{
+			return 4;
+		}
+		else if((longitude >= 30.95 && longitude <=32.61)&&(latidude>=71.62 && latitude<=75.54))
+		{
+			return 4;
+		}
+		else if((longitude >= 30.97 && longitude <=32.77)&&(latidude>=75.54 && latitude<=77.66))
+		{
+			return 5;
+		}
+		else if((longitude >= 30.97 && longitude <=32.69)&&(latidude>=77.66 && latitude<=78.75))
+		{
+			return 4;
+		}
+		else if((longitude >= 31.71 && longitude <=32.72)&&(latidude>=78.72 && latitude<=81.12))
+		{
+			return 4;
+		}
+		else if((longitude >= 29.31 && longitude <=31.74)&&(latidude>=78.72 && latitude<=81.09))
+		{
+			return 5;
+		}
+		else if((longitude >= 28.93 && longitude <=30.84)&&(latidude>=71.73 && latitude<=76.16))
+		{
+			return 3;
+		}
+		else if((longitude >= 27.19 && longitude <=30.86)&&(latidude>=76.16 && latitude<=77.06))
+		{
+			return 4;
+		}
+		else if((longitude >= 29.39 && longitude <=30.92)&&(latidude>=77.01 && latitude<=78.75))
+		{
+			return 4;
+		}
+		else if((longitude >= 27.41 && longitude <=29.34)&&(latidude>=77.09 && latitude<=81.14))
+		{
+			return 4;
+		}
+		else if((longitude >= 27.3 && longitude <=29.31)&&(latidude>=81.12 && latitude<=84.98))
+		{
+			return 4;
+		}
+		else if((longitude >= 23.38 && longitude <=31.76)&&(latidude>=88.99 && latitude<=97.81))
+		{
+			return 5;
+		}
+		else if((longitude >= 25.56 && longitude <=29.26)&&(latidude>=87.62 && latitude<=89.31))
+		{
+			return 4;
+		}
+		else if((longitude >= 26.24 && longitude <=27.49)&&(latidude>=84.98 && latitude<=87.84))
+		{
+			return 5;
+		}
+		else if((longitude >= 25.62 && longitude <=27.27)&&(latidude>=82.1 && latitude<=85.01))
+		{
+			return 4;
+		}
+		else if((longitude >= 25.77 && longitude <=27.19)&&(latidude>=76.22 && latitude<=82.07))
+		{
+			return 3;
+		}
+		else if((longitude >= 27.27 && longitude <=28.93)&&(latidude>=73.41 && latitude<=75.67))
+		{
+			return 2;
+		}
+		else if((longitude >= 27.22 && longitude <=29.04)&&(latidude>=69.03&& latitude<=73.44))
+		{
+			return 3;
+		}
+		else if((longitude >= 27.22 && longitude <=28.93)&&(latidude>=75.65 && latitude<=76.24))
+		{
+			return 3;
+		}
+		else if((longitude >= 24.79 && longitude <=27.24)&&(latidude>=69.06 && latitude<=72.32))
+		{
+			return 3;
+		}
+		else if((longitude >= 25.69 && longitude <=27.91)&&(latidude>=72.32 && latitude<=76.27))
+		{
+			return 2;
+		}
+		else if((longitude >= 24.82 && longitude <=25.58)&&(latidude>=72.3 && latitude<=82.15))
+		{
+			return 2;
+		}
+		else if((longitude >= 24.74 && longitude <=25.8)&&(latidude>=82.1 && latitude<=84.98))
+		{
+			return 3;
+		}
+		else if((longitude >= 25.12 && longitude <=26.29)&&(latidude>=85.01 && latitude<=87.76))
+		{
+			return 4;
+		}
+		else if((longitude >= 23.81 && longitude <=25.54)&&(latidude>=87.79 && latitude<=89.42))
+		{
+			return 3;
+		}
+		else if((longitude >= 24.69 && longitude <=25.15)&&(latidude>=85.04 && latitude<=87.76))
+		{
+			return 3;
+		}
+		else if((longitude >= 23.79 && longitude <=24.79)&&(latidude>=81.25 && latitude<=87.79))
+		{
+			return 3;
+		}
+		else if((longitude >= 24.09 && longitude <=24.69)&&(latidude>=73.44 && latitude<=81.28))
+		{
+			return 2;
+		}
+		else if((longitude >= 21.85 && longitude <=24.74)&&(latidude>=72.32 && latitude<=73.58))
+		{
+			return 3;
+		}
+		else if((longitude >= 21.94 && longitude <=24.79)&&(latidude>=71.18 && latitude<=72.32))
+		{
+			return 4;
+		}
+		else if((longitude >= 21.48 && longitude <=24.2)&&(latidude>=67.81 && latitude<=71.1))
+		{
+			return 5;
+		}
+		else if((longitude >= 21.88 && longitude <=23.9)&&(latidude>=73.55 && latitude<=74.12))
+		{
+			return 3;
+		}
+		else if((longitude >= 23 && longitude <=23.95)&&(latidude>=74.01 && latitude<=77.74))
+		{
+			return 2;
+		}
+		else if((longitude >= 21.88 && longitude <=22.34)&&(latidude>=68.49 && latitude<=71.1))
+		{
+			return 4;
+		}
+		else if((longitude >= 23.08 && longitude <=24)&&(latidude>=77.71 && latitude<=79.67))
+		{
+			return 2;
+		}
+		else if((longitude >= 23.02 && longitude <=24.11)&&(latidude>=79.62 && latitude<=83.54))
+		{
+			return 3;
+		}
+		else if((longitude >= 21.55 && longitude <=24)&&(latidude>=83.46 && latitude<=87.32))
+		{
+			return 2;
+		}
+		else if((longitude >= 21.47 && longitude <=23.79)&&(latidude>=87.27 && latitude<=88.17))
+		{
+			return 3;
+		}
+		else if((longitude >= 22.32 && longitude <=23.13)&&(latidude>=88.2 && latitude<=89.77))
+		{
+			return 4;
+		}
+		else if((longitude >= 23.21 && longitude <=23.76)&&(latidude>=88.17 && latitude<=89.47))
+		{
+			return 4;
+		}
+		else if((longitude >= 21.8 && longitude <=23.05)&&(latidude>=79.67 && latitude<=83.54))
+		{
+			return 2;
+		}
+		else if((longitude >= 22.02 && longitude <=22.89)&&(latidude>=74.07 && latitude<=79.76))
+		{
+			return 3;
+		}
+		else if((longitude >= 20.87 && longitude <=21.72)&&(latidude>=68.46 && latitude<=79.73))
+		{
+			return 3;
+		}
+		else if((longitude >= 20.03 && longitude <=21.99)&&(latidude>=79.76 && latitude<=85.19))
+		{
+			return 2;
+		}
+		else if((longitude >= 19.92 && longitude <=21.64)&&(latidude>=85.8 && latitude<=88.17))
+		{
+			return 3;
+		}
+		else if((longitude >= 17.33 && longitude <=20.11)&&(latidude>=81.23 && latitude<=86.29))
+		{
+			return 2;
+		}
+		else if((longitude >= 17.42 && longitude <=20.11)&&(latidude>=78.94 && latitude<=81.39))
+		{
+			return 3;
+		}
+		else if((longitude >= 17.39 && longitude <=20.08)&&(latidude>=76.93 && latitude<=79.08))
+		{
+			return 2;
+		}
+		else if((longitude >= 20.14 && longitude <=20.63)&&(latidude>=74.77 && latitude<=79.78))
+		{
+			return 2;
+		}
+		else if((longitude >= 20 && longitude <=20.47)&&(latidude>=72.24 && latitude<=74.77))
+		{
+			return 3;
+		}
+		else if((longitude >= 18.31 && longitude <=19.76)&&(latidude>=72.22 && latitude<=74.96))
+		{
+			return 3;
+		}
+		else if((longitude >= 18.29 && longitude <=20)&&(latidude>=74.8 && latitude<=77.12))
+		{
+			return 2;
+		}
+		else if((longitude >= 17.39 && longitude <=18.18)&&(latidude>=72.22 && latitude<=74.23))
+		{
+			return 3;
+		}
+		else if((longitude >= 16.46 && longitude <=18.26)&&(latidude>=72.65 && latitude<=74.18))
+		{
+			return 4;
+		}
+		else if((longitude >= 16.52 && longitude <=17.39)&&(latidude>=74.18 && latitude<=76.79))
+		{
+			return 3;
+		}
+		else if((longitude >= 15.07 && longitude <=17.39)&&(latidude>=79.96 && latitude<=84.11))
+		{
+			return 3;
+		}
+		else if((longitude >= 15.16 && longitude <=17.39)&&(latidude>=76.76 && latitude<=79.812))
+		{
+			return 2;
+		}
+		else if((longitude >= 15.16 && longitude <=16.46)&&(latidude>=75.62 && latitude<=76.79))
+		{
+			return 2;
+		}
+		else if((longitude >= 15.16 && longitude <=16.46)&&(latidude>=72.73 && latitude<=75.65))
+		{
+			return 3;
+		}
+		else if((longitude >= 12.43 && longitude <=15.13)&&(latidude>=72.87 && latitude<=75.43))
+		{
+			return 3;
+		}
+		else if((longitude >= 12.38 && longitude <=15.13)&&(latidude>=75.32 && latitude<=78.2))
+		{
+			return 2;
+		}
+		else if((longitude >= 13.41 && longitude <=15.13)&&(latidude>=78.29 && latitude<=79.1))
+		{
+			return 2;
+		}
+		else if((longitude >= 12.6 && longitude <=15.1)&&(latidude>=79.13 && latitude<=81.8))
+		{
+			return 3;
+		}
+		else if((longitude >= 11.21 && longitude <=12.57)&&(latidude>=79.05 && latitude<=80.52))
+		{
+			return 2;
+		}
+		else if((longitude >= 11.24 && longitude <=13.36)&&(latidude>=78.23 && latitude<=79.08))
+		{
+			return 3;
+		}
+		else if((longitude >= 11.18 && longitude <=12.35)&&(latidude>=75.45 && latitude<=78.26))
+		{
+			return 2;
+		}
+		else if((longitude >= 7.43 && longitude <=12.33)&&(latidude>=70.39 && latitude<=75.73))
+		{
+			return 3;
+		}
+		else if((longitude >= 7.64 && longitude <=11.18)&&(latidude>=75.48 && latitude<=77.63))
+		{
+			return 3;
+		}
+		else if((longitude >= 7.7 && longitude <=11.16)&&(latidude>=77.63 && latitude<=80.46))
+		{
+			return 2;
+		}
+		else if((longitude >= 8.35 && longitude <=15.54)&&(latidude>=93.37 && latitude<=96.61))
+		{
+			return 5;
+		}
+		else
+		{
+			return 5;
+		}
+	
+	}
+</script>
+<script>
+	var myLatlng;
+	var opt = 1;
+	var longitude,latitude;
+myLatlng = new google.maps.LatLng(28.6139, 77.2090);
+	function getLocation() {
+	    if (navigator.geolocation) {
+	        navigator.geolocation.getCurrentPosition(showPosition);
+	    } else {
+	        x.innerHTML = "Geolocation is not supported by this browser.";
+	    }
+	}
+	function showPosition(position) {
+	    document.getElementById('latbox').value = position.coords.latitude;
+	    document.getElementById('lngbox').value = position.coords.longitude;
+	    myLatlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+	    initialize();
+	}
+	function giveresultdelay(){
+		setTimeout("giveresult()",4000);
+	}
+	function giveresult(){
+		var lng = document.getElementById('lngbox').value;
+		var lat = document.getElementById('latbox').value;
+		//alert(lng);
+		//alert(lat);
+	}
+	function initialize1(){
+		var defaultBounds = new google.maps.LatLngBounds(
+			new google.maps.LatLng(17.3700,78.4800)
+			);
+		var input1 = document.getElementById('searchTextField');
+		var options = {
+			bounds: defaultBounds,
+			componentRestrictions: {country: 'in'}
+		};
+	        var autocomplete = new google.maps.places.Autocomplete(input1, options);
+	        google.maps.event.addListener(autocomplete, 'place_changed', function () {
+	        var place = autocomplete.getPlace();
+	        var long,lat,zo;   
+                document.getElementById('latbox').value = place.geometry.location.lat();
+	        document.getElementById('lngbox').value = place.geometry.location.lng();
+                long = place.geometry.location.lat();
+                lat = place.geometry.location.lng();
+                zo = zone(long,lat);    	         
+                document.getElementById('zone').innerHTML = zo;
+                myLatlng = new google.maps.LatLng(place.geometry.location.lat(), place.geometry.location.lng());
+	        initialize();
+	        });
+	}
+	google.maps.event.addDomListener(window, 'load', initialize1);
+
+    var map = null;
+    var marker = null;
+
+    // popup window for pin, if in use
+    var infowindow = new google.maps.InfoWindow({ 
+        size: new google.maps.Size(150,50)
+        });
+ 
+    function createMarker(latlng, name, html) {
+
+    var contentString = html;
+
+    var marker = new google.maps.Marker({
+        position: latlng,
+        map: map,
+        zIndex: Math.round(latlng.lat()*-100000)<<5
+        });
+
+    google.maps.event.addListener(marker, 'click', function() {
+        infowindow.setContent(contentString); 
+        infowindow.open(map,marker);
+        });
+
+    google.maps.event.trigger(marker, 'click');    
+    return marker;
+
+}
+
+function initialize() {
+
+    // the location of the initial pin
+
+    // create the map
+    var myOptions = {
+        zoom: 4,
+        center: myLatlng,
+        mapTypeControl: true,
+        mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+        navigationControl: true,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+
+    map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+    // establish the initial marker/pin
+    var image = 'images/marker.png';  
+    marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      icon: image,
+      title:"Property Location"
+    });
+
+    // close popup window
+    google.maps.event.addListener(map, 'click', function() {
+        infowindow.close();
+        });
+
+    // removing old markers/pins
+    google.maps.event.addListener(map, 'click', function(event) {
+        //call function to create marker
+         if (marker) {
+            marker.setMap(null);
+            marker = null;
+         }
+
+        var image = 'images/marker.png';
+        var myLatLng = event.latLng ;
+        marker = new google.maps.Marker({   
+            position: myLatLng,
+            map: map,
+            icon: image,
+            title:"Property Location"
+        });
+ 
+        formlat = document.getElementById("latbox").value = event.latLng.lat();
+        formlng = document.getElementById("lngbox").value = event.latLng.lng();
+
+    });
+
+}
+</script> 
