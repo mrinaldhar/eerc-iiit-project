@@ -47,11 +47,16 @@ Please let me know if there are questions.
 
 ###For Javascript
 
-There are several functions that help you achieve basic tasks you require for integration. 
+There are several functions that help you achieve basic tasks you require for integration:
+
 `load_form(form_number)` is used to load the form on which the user clicks. 
+
 `doajax(page_url, element)` is used to load the contents of the page given by that url into the container specified by the element.
+
 `addtab(number)` creates a new, empty tab in the UI for you to add content to.
+
 `openTab(number)` is used by the button that takes you to the next tab, unless this page is the last one for that form.
+
 `clearAllTabs()` is used to empty the tabs area. Done initially, and before loading a new form.
 
 
@@ -63,7 +68,8 @@ if (page_loaded!="1_1") {                               //Checks if the tab bein
         
         base = "./form1_stone/1Life_Structural/";       //The base URL for the form. This remains the same for a single form.
         
-        doajax(base+"page1.php", "#tab_1");             //clearAllTabs automatically adds the first tab, so you just call this to load the contents of page1.php into the first tab element.
+        doajax(base+"page1.php", "#tab_1");             //clearAllTabs automatically adds the first tab, 
+                                                        //so you just call this to load the contents of page1.php into the first tab element.
         
         // CODE REPITITION BEGINS FOR AS MANY PAGES THIS FORM HAS
         
