@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<!--Life-threatening Factors related to the Structural Elements - Page 2 -->
-<form action="page2-backend.php" method="">
+
     <p>3. Architectural Features</p>
 
     <p>a. The outer dimensions of the house at plinth level are less than those at the top in either of the two horizontal plan directions</p>

@@ -191,8 +191,8 @@
             <li class="treeview">
               <a href="#"><span>Stone Houses</span> <i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
-                <li><a href="page1-demo.php">Life Structural</a></li>
-                <li><a href="page2-demo.php">Life Non Structural</a></li>
+                <li><a href="#" onclick="load_form('1_1')">Life Structural</a></li>
+                <li><a href="#">Life Non Structural</a></li>
                 <li><a href="#">Economic Structural</a></li>
                 <li><a href="#">Economic Non Structural</a></li>
 
@@ -279,7 +279,19 @@
 
         <!-- Main content -->
         <section class="content">
-          
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="nav-tabs-custom">
+                               
+                                    
+                                </div><!-- /.tab-content -->
+                      
+                    <!-- END CUSTOM TABS -->
+                            </div><!-- /.box -->
+
+            </div>
+          </div>
+
           <!-- Your Page Content Here -->
 
         </section><!-- /.content -->
@@ -310,4 +322,74 @@
           Both of these plugins are recommended to enhance the 
           user experience -->
   </body>
+  <script>
+  var page_loaded = "0";
+  function load_form(which) {
+    if (page_loaded == "0") {
+      clearAllTabs();
+    }
+    switch(which) {
+      case '1_1':
+        if (page_loaded!="1_1") {
+        clearAllTabs();
+        base = "./form1_stone/1Life_Structural/";
+        doajax(base+"page1.php", "#tab_1");
+        addtab(2);
+        doajax(base+"page2.php", "#tab_2");
+        page_loaded = "1_1";
+      } 
+      case '1_2':
+        if (page_loaded!="1_2") {
+        clearAllTabs();
+        base = "./form1_stone/1Life_Structural/";
+        doajax(base+"page1.php", "#tab_1");
+        addtab(2);
+        doajax(base+"page2.php", "#tab_2");
+        page_loaded = "1_2";
+      } 
+      case '1_3':
+        if (page_loaded!="1_3") {
+        clearAllTabs();
+        base = "./form1_stone/1Life_Structural/";
+        doajax(base+"page1.php", "#tab_1");
+        addtab(2);
+        doajax(base+"page2.php", "#tab_2");
+        page_loaded = "1_3";
+      } 
+      case '1_4':
+        if (page_loaded!="1_4") {
+        clearAllTabs();
+        base = "./form1_stone/1Life_Structural/";
+        doajax(base+"page1.php", "#tab_1");
+        addtab(2);
+        doajax(base+"page2.php", "#tab_2");
+        page_loaded = "1_4";
+      } 
+    }
+    
+  }
+  function doajax(page_url, element) {
+    $.ajax({
+      url: page_url,
+  dataType: "html",
+  crossDomain: true,
+  success:function(data){
+    $(element).html(data);
+  }
+});
+  }
+  function addtab(number) {
+    $('#tabs_ctrl').append($('<li><a id="open_'+number+'" href="#tab_'+number+'" data-toggle="tab">Page '+number+'</a></li>'));
+    $('#tabs_cnt').append($('<div class="tab-pane" id="tab_'+number+'"></div>'));
+
+  }
+  function openTab(number) {
+    // $('#open_2').click();
+    $('a[href="#tab_'+number+'"]').trigger("click");
+    // window.location = "#tab_2"
+  }
+  function clearAllTabs() {
+$('.nav-tabs-custom').html('<ul id="tabs_ctrl" class="nav nav-tabs"><li class="active"><a href="#tab_1" data-toggle="tab">Page 1</a></li></ul><div id="tabs_cnt" class="tab-content"><div class="tab-pane active" id="tab_1"></div>');
+  }
+  </script>
 </html>
