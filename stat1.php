@@ -1,8 +1,8 @@
 <?php
 
-define('DB_NAME', 'rvs');
+define('DB_NAME', 'eerc-es');
 define('DB_USER', 'root');
-define('DB_PASSWORD', 'meghana');
+define('DB_PASSWORD', 'mrinaldhar');
 define('DB_HOST', 'localhost');
 
 $link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
