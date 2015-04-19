@@ -321,7 +321,7 @@ function zone(longitude, latidude){
 		}
 		else
 		{
-			return 5;
+			return 6;
 		}
 	
 	}
@@ -365,12 +365,12 @@ myLatlng = new google.maps.LatLng(28.6139, 77.2090);
 	        var autocomplete = new google.maps.places.Autocomplete(input1, options);
 	        google.maps.event.addListener(autocomplete, 'place_changed', function () {
 	        var place = autocomplete.getPlace();
-	        var long,lat,zo;   
+	        var longi,lat,zo;   
                 document.getElementById('latbox').value = place.geometry.location.lat();
 	        document.getElementById('lngbox').value = place.geometry.location.lng();
-                long = place.geometry.location.lat();
+                longi = place.geometry.location.lat();
                 lat = place.geometry.location.lng();
-                zo = zone(long,lat);    	         
+                zo = zone(longi,lat);    	         
                 document.getElementById('zone').innerHTML = zo;
                 myLatlng = new google.maps.LatLng(place.geometry.location.lat(), place.geometry.location.lng());
 	        initialize();
