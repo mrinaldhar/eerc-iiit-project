@@ -22,308 +22,317 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 </cfoutput> 
 <script type="text/javascript">
-function zone(longitude, latidude){
-		if((longitude >= 34.81 && longitude <=37.81)&&(latidude>=71.62 && latitude<=80.76))
+function zone(){
+		window.setTimeout("zone1()", 4000);
+}
+function zone1(){
+		longitude = document.getElementById("latbox").value;
+		latitude = document.getElementById("lngbox").value;
+		alert(latitude);
+		alert(longitude);
+		if((longitude >= 34.81 && longitude <=37.81)&&(latitude>=71.62 && latitude<=80.76))
 		{
-			return 4;
+			zo = 4;
 		}
-		else if((longitude >= 33.42 && longitude <=34.49)&&(latidude>=73.9 && latitude<=77.7))
+		else if((longitude >= 33.42 && longitude <=34.49)&&(latitude>=73.9 && latitude<=77.7))
 		{
-			return 4;
+			zo = 4;
 		}
-		else if((longitude >= 33.51 && longitude <=34.54)&&(latidude>=73.9 && latitude<=75.29))
+		else if((longitude >= 33.51 && longitude <=34.54)&&(latitude>=73.9 && latitude<=75.29))
 		{
-			return 5;
+			zo = 5;
 		}
-		else if((longitude >= 33.51 && longitude <=34.68)&&(latidude>=75.29 && latitude<=80.76))
+		else if((longitude >= 33.51 && longitude <=34.68)&&(latitude>=75.29 && latitude<=80.76))
 		{
-			return 4;
+			zo = 4;
 		}
-		else if((longitude >= 32.74 && longitude <=33.42)&&(latidude>=71.62 && latitude<=80.79))
+		else if((longitude >= 32.74 && longitude <=33.42)&&(latitude>=71.62 && latitude<=80.79))
 		{
-			return 4;
+			zo = 4;
 		}
-		else if((longitude >= 30.95 && longitude <=32.61)&&(latidude>=71.62 && latitude<=75.54))
+		else if((longitude >= 30.95 && longitude <=32.61)&&(latitude>=71.62 && latitude<=75.54))
 		{
-			return 4;
+			zo = 4;
 		}
-		else if((longitude >= 30.97 && longitude <=32.77)&&(latidude>=75.54 && latitude<=77.66))
+		else if((longitude >= 30.97 && longitude <=32.77)&&(latitude>=75.54 && latitude<=77.66))
 		{
-			return 5;
+			zo = 5;
 		}
-		else if((longitude >= 30.97 && longitude <=32.69)&&(latidude>=77.66 && latitude<=78.75))
+		else if((longitude >= 30.97 && longitude <=32.69)&&(latitude>=77.66 && latitude<=78.75))
 		{
-			return 4;
+			zo = 4;
 		}
-		else if((longitude >= 31.71 && longitude <=32.72)&&(latidude>=78.72 && latitude<=81.12))
+		else if((longitude >= 31.71 && longitude <=32.72)&&(latitude>=78.72 && latitude<=81.12))
 		{
-			return 4;
+			zo = 4;
 		}
-		else if((longitude >= 29.31 && longitude <=31.74)&&(latidude>=78.72 && latitude<=81.09))
+		else if((longitude >= 29.31 && longitude <=31.74)&&(latitude>=78.72 && latitude<=81.09))
 		{
-			return 5;
+			zo = 5;
 		}
-		else if((longitude >= 28.93 && longitude <=30.84)&&(latidude>=71.73 && latitude<=76.16))
+		else if((longitude >= 28.93 && longitude <=30.84)&&(latitude>=71.73 && latitude<=76.16))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 27.19 && longitude <=30.86)&&(latidude>=76.16 && latitude<=77.06))
+		else if((longitude >= 27.19 && longitude <=30.86)&&(latitude>=76.16 && latitude<=77.06))
 		{
-			return 4;
+			zo = 4;
 		}
-		else if((longitude >= 29.39 && longitude <=30.92)&&(latidude>=77.01 && latitude<=78.75))
+		else if((longitude >= 29.39 && longitude <=30.92)&&(latitude>=77.01 && latitude<=78.75))
 		{
-			return 4;
+			zo = 4;
 		}
-		else if((longitude >= 27.41 && longitude <=29.34)&&(latidude>=77.09 && latitude<=81.14))
+		else if((longitude >= 27.41 && longitude <=29.34)&&(latitude>=77.09 && latitude<=81.14))
 		{
-			return 4;
+			zo = 4;
 		}
-		else if((longitude >= 27.3 && longitude <=29.31)&&(latidude>=81.12 && latitude<=84.98))
+		else if((longitude >= 27.3 && longitude <=29.31)&&(latitude>=81.12 && latitude<=84.98))
 		{
-			return 4;
+			zo = 4;
 		}
-		else if((longitude >= 23.38 && longitude <=31.76)&&(latidude>=88.99 && latitude<=97.81))
+		else if((longitude >= 23.38 && longitude <=31.76)&&(latitude>=88.99 && latitude<=97.81))
 		{
-			return 5;
+			zo = 5;
 		}
-		else if((longitude >= 25.56 && longitude <=29.26)&&(latidude>=87.62 && latitude<=89.31))
+		else if((longitude >= 25.56 && longitude <=29.26)&&(latitude>=87.62 && latitude<=89.31))
 		{
-			return 4;
+			zo = 4;
 		}
-		else if((longitude >= 26.24 && longitude <=27.49)&&(latidude>=84.98 && latitude<=87.84))
+		else if((longitude >= 26.24 && longitude <=27.49)&&(latitude>=84.98 && latitude<=87.84))
 		{
-			return 5;
+			zo = 5;
 		}
-		else if((longitude >= 25.62 && longitude <=27.27)&&(latidude>=82.1 && latitude<=85.01))
+		else if((longitude >= 25.62 && longitude <=27.27)&&(latitude>=82.1 && latitude<=85.01))
 		{
-			return 4;
+			zo = 4;
 		}
-		else if((longitude >= 25.77 && longitude <=27.19)&&(latidude>=76.22 && latitude<=82.07))
+		else if((longitude >= 25.77 && longitude <=27.19)&&(latitude>=76.22 && latitude<=82.07))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 27.27 && longitude <=28.93)&&(latidude>=73.41 && latitude<=75.67))
+		else if((longitude >= 27.27 && longitude <=28.93)&&(latitude>=73.41 && latitude<=75.67))
 		{
-			return 2;
+			zo = 2;
 		}
-		else if((longitude >= 27.22 && longitude <=29.04)&&(latidude>=69.03&& latitude<=73.44))
+		else if((longitude >= 27.22 && longitude <=29.04)&&(latitude>=69.03&& latitude<=73.44))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 27.22 && longitude <=28.93)&&(latidude>=75.65 && latitude<=76.24))
+		else if((longitude >= 27.22 && longitude <=28.93)&&(latitude>=75.65 && latitude<=76.24))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 24.79 && longitude <=27.24)&&(latidude>=69.06 && latitude<=72.32))
+		else if((longitude >= 24.79 && longitude <=27.24)&&(latitude>=69.06 && latitude<=72.32))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 25.69 && longitude <=27.91)&&(latidude>=72.32 && latitude<=76.27))
+		else if((longitude >= 25.69 && longitude <=27.91)&&(latitude>=72.32 && latitude<=76.27))
 		{
-			return 2;
+			zo = 2;
 		}
-		else if((longitude >= 24.82 && longitude <=25.58)&&(latidude>=72.3 && latitude<=82.15))
+		else if((longitude >= 24.82 && longitude <=25.58)&&(latitude>=72.3 && latitude<=82.15))
 		{
-			return 2;
+			zo = 2;
 		}
-		else if((longitude >= 24.74 && longitude <=25.8)&&(latidude>=82.1 && latitude<=84.98))
+		else if((longitude >= 24.74 && longitude <=25.8)&&(latitude>=82.1 && latitude<=84.98))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 25.12 && longitude <=26.29)&&(latidude>=85.01 && latitude<=87.76))
+		else if((longitude >= 25.12 && longitude <=26.29)&&(latitude>=85.01 && latitude<=87.76))
 		{
-			return 4;
+			zo = 4;
 		}
-		else if((longitude >= 23.81 && longitude <=25.54)&&(latidude>=87.79 && latitude<=89.42))
+		else if((longitude >= 23.81 && longitude <=25.54)&&(latitude>=87.79 && latitude<=89.42))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 24.69 && longitude <=25.15)&&(latidude>=85.04 && latitude<=87.76))
+		else if((longitude >= 24.69 && longitude <=25.15)&&(latitude>=85.04 && latitude<=87.76))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 23.79 && longitude <=24.79)&&(latidude>=81.25 && latitude<=87.79))
+		else if((longitude >= 23.79 && longitude <=24.79)&&(latitude>=81.25 && latitude<=87.79))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 24.09 && longitude <=24.69)&&(latidude>=73.44 && latitude<=81.28))
+		else if((longitude >= 24.09 && longitude <=24.69)&&(latitude>=73.44 && latitude<=81.28))
 		{
-			return 2;
+			zo = 2;
 		}
-		else if((longitude >= 21.85 && longitude <=24.74)&&(latidude>=72.32 && latitude<=73.58))
+		else if((longitude >= 21.85 && longitude <=24.74)&&(latitude>=72.32 && latitude<=73.58))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 21.94 && longitude <=24.79)&&(latidude>=71.18 && latitude<=72.32))
+		else if((longitude >= 21.94 && longitude <=24.79)&&(latitude>=71.18 && latitude<=72.32))
 		{
-			return 4;
+			zo = 4;
 		}
-		else if((longitude >= 21.48 && longitude <=24.2)&&(latidude>=67.81 && latitude<=71.1))
+		else if((longitude >= 21.48 && longitude <=24.2)&&(latitude>=67.81 && latitude<=71.1))
 		{
-			return 5;
+			zo = 5;
 		}
-		else if((longitude >= 21.88 && longitude <=23.9)&&(latidude>=73.55 && latitude<=74.12))
+		else if((longitude >= 21.88 && longitude <=23.9)&&(latitude>=73.55 && latitude<=74.12))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 23 && longitude <=23.95)&&(latidude>=74.01 && latitude<=77.74))
+		else if((longitude >= 23 && longitude <=23.95)&&(latitude>=74.01 && latitude<=77.74))
 		{
-			return 2;
+			zo = 2;
 		}
-		else if((longitude >= 21.88 && longitude <=22.34)&&(latidude>=68.49 && latitude<=71.1))
+		else if((longitude >= 21.88 && longitude <=22.34)&&(latitude>=68.49 && latitude<=71.1))
 		{
-			return 4;
+			zo = 4;
 		}
-		else if((longitude >= 23.08 && longitude <=24)&&(latidude>=77.71 && latitude<=79.67))
+		else if((longitude >= 23.08 && longitude <=24)&&(latitude>=77.71 && latitude<=79.67))
 		{
-			return 2;
+			zo = 2;
 		}
-		else if((longitude >= 23.02 && longitude <=24.11)&&(latidude>=79.62 && latitude<=83.54))
+		else if((longitude >= 23.02 && longitude <=24.11)&&(latitude>=79.62 && latitude<=83.54))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 21.55 && longitude <=24)&&(latidude>=83.46 && latitude<=87.32))
+		else if((longitude >= 21.55 && longitude <=24)&&(latitude>=83.46 && latitude<=87.32))
 		{
-			return 2;
+			zo = 2;
 		}
-		else if((longitude >= 21.47 && longitude <=23.79)&&(latidude>=87.27 && latitude<=88.17))
+		else if((longitude >= 21.47 && longitude <=23.79)&&(latitude>=87.27 && latitude<=88.17))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 22.32 && longitude <=23.13)&&(latidude>=88.2 && latitude<=89.77))
+		else if((longitude >= 22.32 && longitude <=23.13)&&(latitude>=88.2 && latitude<=89.77))
 		{
-			return 4;
+			zo = 4;
 		}
-		else if((longitude >= 23.21 && longitude <=23.76)&&(latidude>=88.17 && latitude<=89.47))
+		else if((longitude >= 23.21 && longitude <=23.76)&&(latitude>=88.17 && latitude<=89.47))
 		{
-			return 4;
+			zo = 4;
 		}
-		else if((longitude >= 21.8 && longitude <=23.05)&&(latidude>=79.67 && latitude<=83.54))
+		else if((longitude >= 21.8 && longitude <=23.05)&&(latitude>=79.67 && latitude<=83.54))
 		{
-			return 2;
+			zo = 2;
 		}
-		else if((longitude >= 22.02 && longitude <=22.89)&&(latidude>=74.07 && latitude<=79.76))
+		else if((longitude >= 22.02 && longitude <=22.89)&&(latitude>=74.07 && latitude<=79.76))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 20.87 && longitude <=21.72)&&(latidude>=68.46 && latitude<=79.73))
+		else if((longitude >= 20.87 && longitude <=21.72)&&(latitude>=68.46 && latitude<=79.73))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 20.03 && longitude <=21.99)&&(latidude>=79.76 && latitude<=85.19))
+		else if((longitude >= 20.03 && longitude <=21.99)&&(latitude>=79.76 && latitude<=85.19))
 		{
-			return 2;
+			zo = 2;
 		}
-		else if((longitude >= 19.92 && longitude <=21.64)&&(latidude>=85.8 && latitude<=88.17))
+		else if((longitude >= 19.92 && longitude <=21.64)&&(latitude>=85.8 && latitude<=88.17))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 17.33 && longitude <=20.11)&&(latidude>=81.23 && latitude<=86.29))
+		else if((longitude >= 17.33 && longitude <=20.11)&&(latitude>=81.23 && latitude<=86.29))
 		{
-			return 2;
+			zo = 2;
 		}
-		else if((longitude >= 17.42 && longitude <=20.11)&&(latidude>=78.94 && latitude<=81.39))
+		else if((longitude >= 17.42 && longitude <=20.11)&&(latitude>=78.94 && latitude<=81.39))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 17.39 && longitude <=20.08)&&(latidude>=76.93 && latitude<=79.08))
+		else if((longitude >= 17.39 && longitude <=20.08)&&(latitude>=76.93 && latitude<=79.08))
 		{
-			return 2;
+			zo = 2;
 		}
-		else if((longitude >= 20.14 && longitude <=20.63)&&(latidude>=74.77 && latitude<=79.78))
+		else if((longitude >= 20.14 && longitude <=20.63)&&(latitude>=74.77 && latitude<=79.78))
 		{
-			return 2;
+			zo = 2;
 		}
-		else if((longitude >= 20 && longitude <=20.47)&&(latidude>=72.24 && latitude<=74.77))
+		else if((longitude >= 20 && longitude <=20.47)&&(latitude>=72.24 && latitude<=74.77))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 18.31 && longitude <=19.76)&&(latidude>=72.22 && latitude<=74.96))
+		else if((longitude >= 18.31 && longitude <=19.76)&&(latitude>=72.22 && latitude<=74.96))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 18.29 && longitude <=20)&&(latidude>=74.8 && latitude<=77.12))
+		else if((longitude >= 18.29 && longitude <=20)&&(latitude>=74.8 && latitude<=77.12))
 		{
-			return 2;
+			zo = 2;
 		}
-		else if((longitude >= 17.39 && longitude <=18.18)&&(latidude>=72.22 && latitude<=74.23))
+		else if((longitude >= 17.39 && longitude <=18.18)&&(latitude>=72.22 && latitude<=74.23))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 16.46 && longitude <=18.26)&&(latidude>=72.65 && latitude<=74.18))
+		else if((longitude >= 16.46 && longitude <=18.26)&&(latitude>=72.65 && latitude<=74.18))
 		{
-			return 4;
+			zo = 4;
 		}
-		else if((longitude >= 16.52 && longitude <=17.39)&&(latidude>=74.18 && latitude<=76.79))
+		else if((longitude >= 16.52 && longitude <=17.39)&&(latitude>=74.18 && latitude<=76.79))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 15.07 && longitude <=17.39)&&(latidude>=79.96 && latitude<=84.11))
+		else if((longitude >= 15.07 && longitude <=17.39)&&(latitude>=79.96 && latitude<=84.11))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 15.16 && longitude <=17.39)&&(latidude>=76.76 && latitude<=79.812))
+		else if((longitude >= 15.16 && longitude <=17.39)&&(latitude>=76.76 && latitude<=79.812))
 		{
-			return 2;
+			zo = 2;
 		}
-		else if((longitude >= 15.16 && longitude <=16.46)&&(latidude>=75.62 && latitude<=76.79))
+		else if((longitude >= 15.16 && longitude <=16.46)&&(latitude>=75.62 && latitude<=76.79))
 		{
-			return 2;
+			zo = 2;
 		}
-		else if((longitude >= 15.16 && longitude <=16.46)&&(latidude>=72.73 && latitude<=75.65))
+		else if((longitude >= 15.16 && longitude <=16.46)&&(latitude>=72.73 && latitude<=75.65))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 12.43 && longitude <=15.13)&&(latidude>=72.87 && latitude<=75.43))
+		else if((longitude >= 12.43 && longitude <=15.13)&&(latitude>=72.87 && latitude<=75.43))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 12.38 && longitude <=15.13)&&(latidude>=75.32 && latitude<=78.2))
+		else if((longitude >= 12.38 && longitude <=15.13)&&(latitude>=75.32 && latitude<=78.2))
 		{
-			return 2;
+			zo = 2;
 		}
-		else if((longitude >= 13.41 && longitude <=15.13)&&(latidude>=78.29 && latitude<=79.1))
+		else if((longitude >= 13.41 && longitude <=15.13)&&(latitude>=78.29 && latitude<=79.1))
 		{
-			return 2;
+			zo = 2;
 		}
-		else if((longitude >= 12.6 && longitude <=15.1)&&(latidude>=79.13 && latitude<=81.8))
+		else if((longitude >= 12.6 && longitude <=15.1)&&(latitude>=79.13 && latitude<=81.8))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 11.21 && longitude <=12.57)&&(latidude>=79.05 && latitude<=80.52))
+		else if((longitude >= 11.21 && longitude <=12.57)&&(latitude>=79.05 && latitude<=80.52))
 		{
-			return 2;
+			zo = 2;
 		}
-		else if((longitude >= 11.24 && longitude <=13.36)&&(latidude>=78.23 && latitude<=79.08))
+		else if((longitude >= 11.24 && longitude <=13.36)&&(latitude>=78.23 && latitude<=79.08))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 11.18 && longitude <=12.35)&&(latidude>=75.45 && latitude<=78.26))
+		else if((longitude >= 11.18 && longitude <=12.35)&&(latitude>=75.45 && latitude<=78.26))
 		{
-			return 2;
+			zo = 2;
 		}
-		else if((longitude >= 7.43 && longitude <=12.33)&&(latidude>=70.39 && latitude<=75.73))
+		else if((longitude >= 7.43 && longitude <=12.33)&&(latitude>=70.39 && latitude<=75.73))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 7.64 && longitude <=11.18)&&(latidude>=75.48 && latitude<=77.63))
+		else if((longitude >= 7.64 && longitude <=11.18)&&(latitude>=75.48 && latitude<=77.63))
 		{
-			return 3;
+			zo = 3;
 		}
-		else if((longitude >= 7.7 && longitude <=11.16)&&(latidude>=77.63 && latitude<=80.46))
+		else if((longitude >= 7.7 && longitude <=11.16)&&(latitude>=77.63 && latitude<=80.46))
 		{
-			return 2;
+			zo = 2;
 		}
-		else if((longitude >= 8.35 && longitude <=15.54)&&(latidude>=93.37 && latitude<=96.61))
+		else if((longitude >= 8.35 && longitude <=15.54)&&(latitude>=93.37 && latitude<=96.61))
 		{
-			return 5;
+			zo = 5;
 		}
 		else
 		{
-			return 6;
+			zo = 6;
 		}
-	
+	alert("hi");
+	alert(zo);
+	document.getElementById("zone").innerHTML = zo;
 	}
 </script>
 <script>
@@ -368,10 +377,7 @@ myLatlng = new google.maps.LatLng(28.6139, 77.2090);
 	        var longi,lat,zo;   
                 document.getElementById('latbox').value = place.geometry.location.lat();
 	        document.getElementById('lngbox').value = place.geometry.location.lng();
-                longi = place.geometry.location.lat();
-                lat = place.geometry.location.lng();
-                zo = zone(longi,lat);    	         
-                document.getElementById('zone').innerHTML = zo;
+                zone();
                 myLatlng = new google.maps.LatLng(place.geometry.location.lat(), place.geometry.location.lng());
 	        initialize();
 	        });
