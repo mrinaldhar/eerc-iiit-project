@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!--Economic Loss-Inducing Factors related to the Non-Structural Elements - Page 1 -->
+<!--Economic Loss-Inducing Factors related to the Structural Elements - Page 2 -->
+<form action= "form-1-backend.php" method="" onsubmit="return false;">
 
-<form action= "page2-backend.php" method="">
 
     <p>2. Lifelines</p>
 
@@ -17,6 +17,20 @@
     <p>You may select 0 or more.</p>
     <input type="checkbox" name="_2-3[]" value='a' id='_2-3_a_-10'/>Sewage line is rigidly held between house and main line<br/>'
     <br/>
+     <button onclick="show()">Show</button>
 
-    <input type="submit" value="Submit"/>
 </form>
+<script>
+$('input').click(function() {
+
+    console.log('hi');    
+    section = this.name.split('-')[0].split('_')[1]
+    console.log("section"+section);
+        scores[section] += parseInt(this.id.split('_')[3]);
+    console.log("score"+this.id.split('_')[3]);
+      if (scores[section] <= formvals[page_loaded][section]) {
+        scores[section] = formvals[page_loaded][section];
+    }
+    console.log(scores);
+});
+</script>

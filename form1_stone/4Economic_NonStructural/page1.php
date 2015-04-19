@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!--Economic Loss-Inducing Factors related to the Non-Structural Elements - Page 1 -->
+<!--Economic Loss-Inducing Factors related to the Structural Elements - Page 2 -->
+<form action= "form-1-backend.php" method="" onsubmit="return false;">
 
-<form action= "page1-backend.php" method="">
     <p>1. Acceleration and Displacement Hazards</p>
 
     <p>1.1 Shelves</p>
@@ -25,8 +25,20 @@
     <p>You may select 0 or more.</p>
     <input type="checkbox" name="_1-5[]" value='a' id='_1-5_a_-20'/>Unsecured to adjacent building<br/>'
     <br/>
-
-    
-
-    <input type="submit" value="Submit"/>
+<button onclick="window.openTab(2)">Next page</button>
 </form>
+
+<script>
+$('input').click(function() {
+
+    console.log('hi');    
+    section = this.name.split('-')[0].split('_')[1]
+    console.log("section"+section);
+        scores[section] += parseInt(this.id.split('_')[3]);
+    console.log("score"+this.id.split('_')[3]);
+      if (scores[section] <= formvals[page_loaded][section]) {
+        scores[section] = formvals[page_loaded][section];
+    }
+    console.log(scores);
+});
+</script>

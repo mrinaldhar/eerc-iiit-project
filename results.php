@@ -129,14 +129,14 @@
                   <!-- The user image in the navbar-->
                   <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image"/>
                   <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                  <span class="hidden-xs">Administrator</span>
+                  <span class="hidden-xs">Mrinal Dhar</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- The user image in the menu -->
                   <li class="user-header">
                     <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
                     <p>
-                      Administrator
+                      Mrinal Dhar
                       <small>Member since Mar. 2015</small>
                     </p>
                   </li>
@@ -187,7 +187,7 @@
           <!-- Sidebar Menu -->
           <ul class="sidebar-menu">
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="index.php"><span>Back to home</span></a></li>
+            <li class="active"><a href="index.php"><span>Return to Home</span></a></li>
           </ul><!-- /.sidebar-menu -->
         </section>
         <!-- /.sidebar -->
@@ -198,11 +198,11 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Statistics
+            RVS Score
             <small></small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Statistics</a></li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Results</a></li>
             <li class="active">Here</li>
           </ol>
         </section>
@@ -213,11 +213,11 @@
             <div class="col-lg-12">
               <div class="nav-tabs-custom">
                                <ul id="tabs_ctrl" class="nav nav-tabs"><li class="active"><a href="#tab_1" data-toggle="tab">Quick Look</a></li></ul><div id="tabs_cnt" class="tab-content">
-                               <div class="tab-pane active" id="tab_1">
-                                
-            <img width="70%" src="stats1.jpg" />
-            <img width="70%" src="stats2.jpg" />
-
+                               <div class="tab-pane active" id="tab_1"><big>Your RVS score is 
+                                <?php
+                                echo '<h1>'.abs($_GET['score']).' / 100</h1>';
+                                ?>
+                              </big>
                                </div>
                                     
                                 </div><!-- /.tab-content -->

@@ -1,15 +1,38 @@
-<form Action="form-x-backend.php">
+
 <p>Name of Owner</p>
 <input type="text" name="Name of Owner" placeholder="Enter your full name"/>
 <p>Contact number</p>
 <input type="text" name="Contact" placeholder="number"/>
 <p>Address</p>
-<input type="text" name="Address" placeholder="Address"/>
+
+<button onclick="getLocation()">Share Current Location</button>
+
+ <input id="searchTextField" class="form-control" type="text" style="float: left;width: 60%;" onKeydown="Javascript:    if(event.keyCode==13)giveresultdelay();">
+  <br>
+  <br>
+  <div id="map_canvas" style="width:50%; display: none;height:50%; border: 5px solid #000;"></div>
+
+  <div id="latlong">
+    <p>Latitude: <input size="20" type="text" id="latbox" name="lat" ></p>
+    <p>Longitude: <input size="20" type="text" id="lngbox" name="lng" ></p>
+    <br>
+    <p id="zone"></p>
+  </div>
 <p>Block</p>
 <input type="text" name="Block" placeholder="Block"/>
 <p>District</p>
 <input type="text" name="District" placeholder="District"/>
-<p>Density</p>
+<p>Density</p> <input id="searchTextField" class="form-control" type="text" style="float: left;width: 60%;" onKeydown="Javascript:    if(event.keyCode==13)giveresultdelay();">
+  <br>
+  <br>
+  <div id="map_canvas" style="width:50%; height:50%; display:none; border: 5px solid #000;"></div>
+
+  <div id="latlong">
+    <p>Latitude: <input size="20" type="text" id="latbox" name="lat" ></p>
+    <p>Longitude: <input size="20" type="text" id="lngbox" name="lng" ></p>
+    <br>
+    <p id="zone"></p>
+  </div>
 <input type="radio" name="Urban" placeholder="Urban"/>Urban
 <input type="radio" name="Rural" placeholder="Rural"/>Rural
 <p>Day:</p>
@@ -56,4 +79,7 @@
 <input type="radio" name="" placeholder=""/>Super Market
 <input type="radio" name="" placeholder=""/>Vegetable Market
 <input type="radio" name="" placeholder=""/>COWSHED
-</form>
+
+<br /><br /><br />
+<input type="submit" value="Submit" />
+

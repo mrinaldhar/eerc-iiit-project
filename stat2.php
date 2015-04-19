@@ -76,7 +76,7 @@ if($_POST['submit'] == "submit")
 	$count[5] = mysql_num_rows($r);
 
 	$jsonhousezone = json_encode($count); # selected house type, zone wise distribution
-	
+	echo $jsonhousezone;
 	
 	$para = $_POST['parameter'];
 	$res = mysql_query("SELECT question,answer,type FROM $temptable WHERE text = '$para'",$link);
@@ -103,7 +103,7 @@ if($_POST['submit'] == "submit")
 		}
 	}
 	$jsonhouseparazone = json_encode($pzcount); # selected house type, parameter, zone wise distribution
-
+	echo $jsonhouseparazone;
 
 }
 

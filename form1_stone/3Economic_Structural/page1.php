@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<!--Economic Loss-Inducing Factors related to the Structural Elements - Page 1 -->
 
-<form action= "form-1-backend.php" method="">
+
+
+<form action= "form-1-backend.php" method="" onsubmit="return false;">
     <p>1. Sittng Issues</p>
 
     <p>1.1 Slope of the ground</p>
@@ -29,6 +29,20 @@
     <input type="checkbox" name="_2-2[]" value='d' id='_2-2_d_-4'/>Discontinuous RC foundation beam system<br/>'
     <input type="checkbox" name="_2-2[]" value='e' id='_2-2_e_-2'/>Continuous RC foundation beam system on soft soil'
     <br/>
-
-    <input type="submit" value="Submit"/>
+    <button onclick="window.openTab(2)">Next page</button>
 </form>
+
+<script>
+$('input').click(function() {
+
+    console.log('hi');    
+    section = this.name.split('-')[0].split('_')[1]
+    console.log("section"+section);
+        scores[section] += parseInt(this.id.split('_')[3]);
+    console.log("score"+this.id.split('_')[3]);
+      if (scores[section] <= formvals[page_loaded][section]) {
+        scores[section] = formvals[page_loaded][section];
+    }
+    console.log(scores);
+});
+</script>

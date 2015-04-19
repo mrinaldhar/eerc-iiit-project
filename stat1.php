@@ -5,18 +5,18 @@ define('DB_USER', 'root');
 define('DB_PASSWORD', 'mrinaldhar');
 define('DB_HOST', 'localhost');
 
-$link = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD);
+$link = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD);
 
 if (!$link) 
 {
-     die('Could not connect: ' . mysql_error());
+     die('Could not connect: ' . mysqli_error());
 }
 
-$db_selected = mysql_select_db(DB_NAME, $link);
+$db_selected = mysqli_select_db(DB_NAME, $link);
 
 if (!$db_selected) 
 {
-     die('Can\'t use ' . DB_NAME . ': ' . mysql_error());
+     die('Can\'t use ' . DB_NAME . ': ' . mysqli_error());
 }
 
 #lookup -> change depending on names of forms
@@ -31,12 +31,12 @@ $tables[7] = "Form7_Stone_LNS" ;
 
 for( $i = 1; $i < 8 ; $i++)
 {
-$r = mysql_query("SELECT id FROM $tables[$i]");
-$t[$i] = mysql_num_rows($r);
+$r = mysqli_query("SELECT id FROM $tables[$i]");
+$t[$i] = mysqli_num_rows($r);
 
 }
 $jsonhouse = json_encode($t); #no of each house type
-
+echo $jsonhouse;
 
 for( $i = 2; $i < 6 ; $i++)
 {
@@ -44,17 +44,17 @@ $p[$i] = 0;
 }
 for($i = 1; $i < 8 ; $i++)
 {
-$r = mysql_query("SELECT id FROM $tables[$i] WHERE zone = 2");
-$p[2] += mysql_num_rows($r);
-$r = mysql_query("SELECT id FROM $tables[$i] WHERE zone = 3");
-$p[3] += mysql_num_rows($r);
-$r = mysql_query("SELECT id FROM $tables[$i] WHERE zone = 4");
-$p[4] += mysql_num_rows($r);
-$r = mysql_query("SELECT id FROM $tables[$i] WHERE zone = 5");
-$p[5] += mysql_num_rows($r);
+$r = mysqli_query("SELECT id FROM $tables[$i] WHERE zone = 2");
+$p[2] += mysqli_num_rows($r);
+$r = mysqli_query("SELECT id FROM $tables[$i] WHERE zone = 3");
+$p[3] += mysqli_num_rows($r);
+$r = mysqli_query("SELECT id FROM $tables[$i] WHERE zone = 4");
+$p[4] += mysqli_num_rows($r);
+$r = mysqli_query("SELECT id FROM $tables[$i] WHERE zone = 5");
+$p[5] += mysqli_num_rows($r);
 }
 $jsonzone = json_encode($p);# no in each zone
-
+echo $jsonzone;
 ?>
 <!DOCTYPE html>
 
@@ -87,6 +87,6 @@ $jsonzone = json_encode($p);# no in each zone
 <input type="submit" name="submit" value="submit"/>
 </form>
 
-<?php mysql_close(); ?>
+<?php mysqli_close(); ?>
 </body>
 </html>
