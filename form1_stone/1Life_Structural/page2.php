@@ -21,7 +21,7 @@
     <p>4. Structural Aspects</p>
 
     <p>a. The roof is constructed such that it is not integral within itself (i.e., it does not act as a single unit and breaks open during earthquake shaking) and is not anchored into the walls</p>
-    <input type="checkbox" name="_4a" value='-2'/>Yes
+    <input type="checkbox" name="_4a" value='Y'/>Yes
     <input type="checkbox" name="_4a" value='N'/>No
 
     <p>b. The walls are thick and made in two wythes</p>
