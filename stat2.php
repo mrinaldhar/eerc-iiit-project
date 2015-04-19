@@ -1,8 +1,8 @@
 <?php
 
-define('DB_NAME1', 'statistics');
+define('DB_NAME1', 'eerc-es');
 define('DB_USER', 'root');
-define('DB_PASSWORD', 'meghana');
+define('DB_PASSWORD', 'mrinaldhar');
 define('DB_HOST', 'localhost');
 
 #lookup -> change depending on names of forms
@@ -37,7 +37,7 @@ if (!$db_selected)
      die('Can\'t use ' . DB_NAME1 . ': ' . mysql_error());
 }
 
-define('DB_NAME2', 'rvs');
+define('DB_NAME2', 'eerc-es');
 $link1 = mysql_connect(DB_HOST, DB_USER, DB_PASSWORD,true);
 
 if (!$link1) 

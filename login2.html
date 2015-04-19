@@ -24,13 +24,13 @@
   <body class="login-page">
     <div class="login-box">
       <div class="login-logo">
-        <a href="./index.php"><b>EERC</b> IIIT-H</a>
+        <a href="./index2.php"><b>EERC</b> IIIT-H</a>
       </div><!-- /.login-logo -->
       <div class="login-box-body">
         <p class="login-box-msg">Sign in to start your session</p>
-        <form action="./index.php" method="post" onsubmit="handleLogin(); return false;">
+        <form action="./index.php" method="post">
           <div class="form-group has-feedback">
-            <input id="username" type="text" class="form-control" placeholder="Username"/>
+            <input type="text" class="form-control" placeholder="Email"/>
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
@@ -73,16 +73,6 @@
           increaseArea: '20%' // optional
         });
       });
-      function handleLogin() {
-        alert($('#username').val());
-        if ($('#username').val() == 'admin') {
-          window.location = 'index2.php';
-        }
-        else {
-          window.location = 'index.php';
-        }
-        return false;
-      }
     </script>
   </body>
 </html>

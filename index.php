@@ -137,7 +137,7 @@
                     <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
                     <p>
                       Mrinal Dhar
-                      <small>Member since Nov. 2012</small>
+                      <small>Member since Mar. 2015</small>
                     </p>
                   </li>
                   <!-- Menu Footer-->
@@ -192,7 +192,7 @@
               <a href="#"><span>Stone Houses</span> <i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
                 <li><a href="#" onclick="load_form('1_1')">Life Structural</a></li>
-                <li><a href="#">Life Non Structural</a></li>
+                <li><a href="#" onclick="load_form('1_2')">Life Non Structural</a></li>
                 <li><a href="#">Economic Structural</a></li>
                 <li><a href="#">Economic Non Structural</a></li>
 
@@ -334,18 +334,29 @@
         clearAllTabs();
         base = "./form1_stone/1Life_Structural/";
         doajax(base+"page1.php", "#tab_1");
-        addtab(2);
-        doajax(base+"page2.php", "#tab_2");
+
+        for (i=2; i<=3; i++) {
+          console.log('adding'+i);
+          addtab(i);
+          doajax(base+"page"+i+".php", "#tab_"+i);
+        }
+
         page_loaded = "1_1";
+        break;
       } 
       case '1_2':
         if (page_loaded!="1_2") {
         clearAllTabs();
-        base = "./form1_stone/1Life_Structural/";
+        base = "./form1_stone/2Life_NonStructural/";
         doajax(base+"page1.php", "#tab_1");
-        addtab(2);
-        doajax(base+"page2.php", "#tab_2");
+         for (i=2; i<=2; i++) {
+          console.log('adding'+i);
+          addtab(i);
+          doajax(base+"page"+i+".php", "#tab_"+i);
+        }
+
         page_loaded = "1_2";
+        break;
       } 
       case '1_3':
         if (page_loaded!="1_3") {
@@ -355,6 +366,8 @@
         addtab(2);
         doajax(base+"page2.php", "#tab_2");
         page_loaded = "1_3";
+        break;
+
       } 
       case '1_4':
         if (page_loaded!="1_4") {
@@ -364,6 +377,8 @@
         addtab(2);
         doajax(base+"page2.php", "#tab_2");
         page_loaded = "1_4";
+        break;
+
       } 
     }
     

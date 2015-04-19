@@ -9,7 +9,6 @@
     <!-- Font Awesome Icons -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!-- Ionicons -->
-    <link href="./plugins/iCheck/all.css" rel="stylesheet" type="text/css" />
     <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
     <!-- Theme style -->
     <link href="dist/css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
@@ -130,15 +129,15 @@
                   <!-- The user image in the navbar-->
                   <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image"/>
                   <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                  <span class="hidden-xs">Mrinal Dhar</span>
+                  <span class="hidden-xs">Administrator</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- The user image in the menu -->
                   <li class="user-header">
                     <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
                     <p>
-                      Mrinal Dhar
-                      <small>Member since Nov. 2012</small>
+                      Administrator
+                      <small>Member since Mar. 2015</small>
                     </p>
                   </li>
                   <!-- Menu Footer-->
@@ -188,12 +187,12 @@
           <!-- Sidebar Menu -->
           <ul class="sidebar-menu">
             <!-- Optionally, you can add icons to the links -->
-            <li ><a href="#"><span>Overview</span></a></li>
-            <li class="active treeview">
+            <li class="active"><a href="#"><span>Statistics</span></a></li>
+            <li class="treeview">
               <a href="#"><span>Stone Houses</span> <i class="fa fa-angle-left pull-right"></i></a>
               <ul class="treeview-menu">
-                <li><a href="page1-demo.php">Life Structural</a></li>
-                <li><a href="page2-demo.php">Life Non Structural</a></li>
+                <li><a href="#" onclick="load_form('1_1')">Life Structural</a></li>
+                <li><a href="#">Life Non Structural</a></li>
                 <li><a href="#">Economic Structural</a></li>
                 <li><a href="#">Economic Non Structural</a></li>
 
@@ -269,54 +268,31 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Stone Houses
-            <small>Life Structural</small>
+            Statistics
+            <small></small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Stone Houses</a></li>
-            <li class="active">Life Structural</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Statistics</a></li>
+            <li class="active">Here</li>
           </ol>
         </section>
 
         <!-- Main content -->
         <section class="content">
-          
-          
-<!--Life-threatening Factors related to the Structural Elements - Page 1 -->
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="nav-tabs-custom">
+                               <ul id="tabs_ctrl" class="nav nav-tabs"><li class="active"><a href="#tab_1" data-toggle="tab">Page 1</a></li></ul><div id="tabs_cnt" class="tab-content"><div class="tab-pane active" id="tab_1"></div>
+                                    
+                                </div><!-- /.tab-content -->
+                      
+                    <!-- END CUSTOM TABS -->
+                            </div><!-- /.box -->
 
-<form action="index.php" method="" role="form">
-  <div class="form-group">
-    <p>1. Sitting Issues</p>
+            </div>
+          </div>
 
-    <p>a. The house is built on hill slopes that can slide</p>
-    <input type="radio" class="flat-red" name="_1a" value='Y'/>Yes
-    <input type="radio" class="flat-red" name="_1a" value='N'/>No
-
-
-    <p>b. The house is built on river terraces that can slide/creep</p>
-    <input type="radio" class="flat-red" name="_1b" value='Y'/>Yes
-    <input type="radio" class="flat-red" name="_1b" value='N'/>No
-
-
-    <p>c. The house is built on hill slopes /adjacent to hill slopes (even though on flat ground), but vulnerable to falling debris from the hill top</p>
-    <input type="radio" class="flat-red" name="_1c" value='Y'/>Yes
-    <input type="radio" class="flat-red" name="_1c" value='N'/>No
-    <br/>
-
-    <p>2. Soil and Foundation Conditions</p>
-
-    <p>a. The soil underneath the house is liquefiable</p>
-    <input type="radio" class="flat-red" name="_2a" value='Y'/>Yes
-    <input type="radio" class="flat-red" name="_2a" value='N'/>No
-
-    <p>b. The soil in the area adjoining the site is liquefiable and can flow laterally to move the soil from underneath the house</p>
-    <input type="radio" class="flat-red" name="_2b" value='Y'/>Yes
-    <input type="radio" class="flat-red" name="_2b" value='N'/>No
-    <br/>
-</div>
-    <input type="submit" class="btn btn-primary btn-success" value="Submit" />
-</form>
-
+          <!-- Your Page Content Here -->
 
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
@@ -346,4 +322,74 @@
           Both of these plugins are recommended to enhance the 
           user experience -->
   </body>
+  <script>
+  var page_loaded = "0";
+  function load_form(which) {
+    if (page_loaded == "0") {
+      clearAllTabs();
+    }
+    switch(which) {
+      case '1_1':
+        if (page_loaded!="1_1") {
+        clearAllTabs();
+        base = "./form1_stone/1Life_Structural/";
+        doajax(base+"page1.php", "#tab_1");
+        addtab(2);
+        doajax(base+"page2.php", "#tab_2");
+        page_loaded = "1_1";
+      } 
+      case '1_2':
+        if (page_loaded!="1_2") {
+        clearAllTabs();
+        base = "./form1_stone/1Life_Structural/";
+        doajax(base+"page1.php", "#tab_1");
+        addtab(2);
+        doajax(base+"page2.php", "#tab_2");
+        page_loaded = "1_2";
+      } 
+      case '1_3':
+        if (page_loaded!="1_3") {
+        clearAllTabs();
+        base = "./form1_stone/1Life_Structural/";
+        doajax(base+"page1.php", "#tab_1");
+        addtab(2);
+        doajax(base+"page2.php", "#tab_2");
+        page_loaded = "1_3";
+      } 
+      case '1_4':
+        if (page_loaded!="1_4") {
+        clearAllTabs();
+        base = "./form1_stone/1Life_Structural/";
+        doajax(base+"page1.php", "#tab_1");
+        addtab(2);
+        doajax(base+"page2.php", "#tab_2");
+        page_loaded = "1_4";
+      } 
+    }
+    
+  }
+  function doajax(page_url, element) {
+    $.ajax({
+      url: page_url,
+  dataType: "html",
+  crossDomain: true,
+  success:function(data){
+    $(element).html(data);
+  }
+});
+  }
+  function addtab(number) {
+    $('#tabs_ctrl').append($('<li><a id="open_'+number+'" href="#tab_'+number+'" data-toggle="tab">Page '+number+'</a></li>'));
+    $('#tabs_cnt').append($('<div class="tab-pane" id="tab_'+number+'"></div>'));
+
+  }
+  function openTab(number) {
+    // $('#open_2').click();
+    $('a[href="#tab_'+number+'"]').trigger("click");
+    // window.location = "#tab_2"
+  }
+  function clearAllTabs() {
+$('.nav-tabs-custom').html('<ul id="tabs_ctrl" class="nav nav-tabs"><li class="active"><a href="#tab_1" data-toggle="tab">Page 1</a></li></ul><div id="tabs_cnt" class="tab-content"><div class="tab-pane active" id="tab_1"></div>');
+  }
+  </script>
 </html>
